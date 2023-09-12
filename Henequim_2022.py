@@ -11,11 +11,10 @@ P_1 = lambda t: t
 
 
 P_list = [P_0, P_1]
-
+def recursive_lambda(d):
+        return lambda t, f1=P_list[-1], f2=P_list[-2]: (((2*d + 1)/(d+1))*t*f1(t)) - (((d)/(d+1))*f2(t))
 #Indexando todas as funções em uma lista
 for d in range(1,6):
-    def recursive_lambda(d):
-        return lambda t, f1=P_list[-1], f2=P_list[-2]: (((2*d + 1)/(d+1))*t*f1(t)) - (((d)/(d+1))*f2(t))
     P_list.append(recursive_lambda(d))
 
 #Pode ser utilizado método da bisseção
