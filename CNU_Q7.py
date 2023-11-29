@@ -59,3 +59,5 @@ plt.xlabel('Tempo (dias)')
 plt.ylabel('População')
 plt.legend()
 plt.show()
+
+print(f'b) O máximo de infectados é {np.floor(np.max(I_values))}')
